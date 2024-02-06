@@ -13,6 +13,20 @@
     <Company>Helvetitec Technologies Ltda</Company>
     <Description>Financial Helpers</Description>
     <Copyright>© Helvetitec Technologies Ltda 2024</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/sharpcontrols/Financial</PackageProjectUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
