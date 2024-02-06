@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SharpControls.Financial</RootNamespace>
+    <AssemblyName>SharpControls.Financial</AssemblyName>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>SharpControls.Financial</Title>
+    <Version>1.0.0</Version>
+    <Authors>daRedLoCo</Authors>
+    <Company>Helvetitec Technologies Ltda</Company>
+    <Description>Financial Helpers</Description>
+    <Copyright>© Helvetitec Technologies Ltda 2024</Copyright>
+  </PropertyGroup>
+
+</Project>
