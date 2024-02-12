@@ -51,21 +51,37 @@ namespace SharpControls.Financial
             }
         }
 
+        /// <summary>
+        /// Returns the saldo
+        /// </summary>
+        /// <returns></returns>
         public int SaldoInCents()
         {
             return Utils.SaldoInCents(Profits, Expenses, Planned);
         }
 
+        /// <summary>
+        /// Returns the saldo of all profits
+        /// </summary>
+        /// <returns></returns>
         public int SaldoProfitsInCents()
         {
             return Utils.SaldoInCents(Profits, [], Planned);
         }
 
+        /// <summary>
+        /// Returns the saldo of all expenses (Will be negative!)
+        /// </summary>
+        /// <returns></returns>
         public int SaldoExpensesInCents()
         {
             return Utils.SaldoInCents([], Expenses, Planned);
         }
 
+        /// <summary>
+        /// Returns a list of all overdue profits
+        /// </summary>
+        /// <returns></returns>
         public List<Profit> OverdueProfits()
         {
             List<Profit> overdues = [];
@@ -79,6 +95,10 @@ namespace SharpControls.Financial
             return overdues;
         }
 
+        /// <summary>
+        /// Returns a list of all overdue expenses
+        /// </summary>
+        /// <returns></returns>
         public List<Expense> OverdueExpenses()
         {
             List<Expense> overdues = [];
@@ -92,6 +112,10 @@ namespace SharpControls.Financial
             return overdues;
         }
 
+        /// <summary>
+        /// Returns a list of all clients with overdue profits
+        /// </summary>
+        /// <returns></returns>
         public List<Client> OverdueClients()
         {
             List<Client> overdues = [];
@@ -103,6 +127,10 @@ namespace SharpControls.Financial
             return overdues;
         }
 
+        /// <summary>
+        /// Returns a list of all suppliers with overdue expenses
+        /// </summary>
+        /// <returns></returns>
         public List<Supplier> OverdueSuppliers()
         {
             List<Supplier> overdues = [];
