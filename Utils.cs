@@ -30,5 +30,24 @@ namespace SharpControls.Financial
             DateTime dueDate = DateTime.Now.AddDays(days);
             return expenses.Where(e => e.DueDate >= DateTime.Now && e.DueDate <= dueDate).ToList();
         }
+
+        public static int SaldoInCents(Database database)
+        {
+            return SaldoInCents(database.Profits, database.Expenses);
+        }
+
+        public static int SaldoInCents(List<Profit> profits, List<Expense> expenses)
+        {
+            int saldo = 0;
+            foreach(Profit profit in profits)
+            {
+                saldo += (int)profit.TotalValue;
+            }
+            foreach(Expense expense in expenses)
+            {
+                saldo -= (int)expense.TotalValue;
+            }
+            return saldo;
+        }
     }
 }
