@@ -9,7 +9,7 @@
         public uint TotalValue => GetTotalValue();
         public DateTime ReferenceDate { get; set; }
         public DateTime DueDate { get; set; }
-        public DateTime PayDay { get; set; }
+        public DateTime? PayDay { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
