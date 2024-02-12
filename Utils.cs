@@ -49,5 +49,31 @@ namespace SharpControls.Financial
             }
             return saldo;
         }
+
+        public static int[] DailySaldoInCents(Database database, int month, int year)
+        {
+            return DailySaldoInCents(database.Profits, database.Expenses, month, year);
+        }
+
+        public static int[] DailySaldoInCents(List<Profit> profits, List<Expense> expenses, int month, int year)
+        {
+            int daysInMonth = DateTime.DaysInMonth(year, month);
+            int[] saldo = [daysInMonth];
+            foreach(Profit profit in profits)
+            {
+                if(profit.PayDay != null && profit.PayDay.Value.Year == year && profit.PayDay.Value.Month == month)
+                {
+                    saldo[profit.PayDay.Value.Day - 1] += (int)profit.TotalValue;
+                }
+            }
+            foreach (Expense expense in expenses)
+            {
+                if (expense.PayDay != null && expense.PayDay.Value.Year == year && expense.PayDay.Value.Month == month)
+                {
+                    saldo[expense.PayDay.Value.Day - 1] -= (int)expense.TotalValue;
+                }
+            }
+            return saldo;
+        }
     }
 }
