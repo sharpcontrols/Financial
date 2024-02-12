@@ -8,7 +8,7 @@
     <AssemblyName>SharpControls.Financial</AssemblyName>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>SharpControls.Financial</Title>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <Authors>daRedLoCo</Authors>
     <Company>Helvetitec Technologies Ltda</Company>
     <Description>Financial Helpers</Description>
@@ -16,6 +16,10 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/sharpcontrols/Financial</PackageProjectUrl>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <PackageReleaseNotes>- Added FinancialTimespan class
+- Added Utils class</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
